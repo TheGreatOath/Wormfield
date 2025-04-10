@@ -1,11 +1,3 @@
---[[            |
-'               |   Last changes:     
-WormPlus 1.0.0  |   06.03 - Fixed some themes and mobile button, added normal bypass to Fisch. 
-.gg/yxRfqYnZZw  |   31.01 - added Show_Assets toggle. Soon ill make normal bypass.
-'               |   29.01 - well well well removed last update, added "Bloody" theme and Worm-plus settings 😉
-]]--    
-
---- WORM PLUS SETTINGS ---
 local Show_Button = false -- Shows the button for toggle Worm ui manually. If "false", works only on mobile, if "true", works everytime.
 local Button_Icon = "" -- Icon of the button for toggle Worm ui
 ----------------------------
