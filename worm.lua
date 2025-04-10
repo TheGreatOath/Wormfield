@@ -78,11 +78,11 @@ local settingsTable = {
 				
 	}
 
-local HttpService = getService('HttpService')
-local RunService = getService('RunService')
+--local HttpService = getService('HttpService')
+--local RunService = getService('RunService')
 
 -- Environment Check
-local useStudio = RunService:IsStudio() or false
+--local useStudio = RunService:IsStudio() or false
 
 local settingsCreated = false
 local cachedSettings
@@ -158,30 +158,6 @@ loadSettings()
 if debugX then
 	warn('Settings Loaded')
 end
-
---if not cachedSettings or not cachedSettings.System or not cachedSettings.System.usageAnalytics then
---	local fileFunctionsAvailable = isfile and writefile and readfile
-
---	if not fileFunctionsAvailable and not useStudio then
---		warn('Wormfield Interface Suite | Oath Analytics:\n\n\nAs you don\'t have file functionality with your executor, we are unable to save whether you want to opt in or out to analytics.\nIf you do not want to take part in anonymised usage statistics, let us know in our Discord at discord.gg/yxRfqYnZZw and we will manually opt you out.')
---		analytics = true	
---	else
---		prompt.create(
---			'Help us improve',
---	            [[Would you like to allow Oath to collect usage statistics?
-
---<font transparency='0.4'>No data is linked to you or your personal activity.</font>]],
---			'Continue',
---			'Cancel',
---			function(result)
---				settingsTable.System.usageAnalytics.Value = result
---				analytics = result
---			end
---		)
---	end
-
---	repeat task.wait() until analytics ~= nil
---end
 
 local WormfieldLibrary = {
 	Flags = {},
