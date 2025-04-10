@@ -77,10 +77,6 @@ local settingsTable = {
 		-- wormfieldprompts
 
 	},
-	System = {
-		usageAnalytics = {Type = 'toggle', Value = true, Name = 'asd'},
-	}
-}
 
 local HttpService = getService('HttpService')
 local RunService = getService('RunService')
@@ -109,7 +105,7 @@ local function loadSettings()
 			-- for debug in studio
 			if useStudio then
 				file = [[
-		{"General":{"wormfieldOpen":{"Value":"K","Type":"bind","Name":"Wormfield Keybind","Element":{"HoldToInteract":false,"Ext":true,"Name":"Wormfield Keybind","Set":null,"CallOnChange":true,"Callback":null,"CurrentKeybind":"K"}}},"System":{"usageAnalytics":{"Value":false,"Type":"toggle","Name":"asd","Element":{"Ext":true,"Name":"asd","Set":null,"CurrentValue":false,"Callback":null}}}}
+		{"General":{"wormfieldOpen":{"Value":"K","Type":"bind","Name":"Wormfield Keybind","Element":{"HoldToInteract":false,"Ext":true,"Name":"Wormfield Keybind","Set":null,"CallOnChange":true,"Callback":null,"CurrentKeybind":"K"}}}}}}}
 	]]
 			end
 
