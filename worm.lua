@@ -75,6 +75,7 @@ local settingsTable = {
 		wormfieldOpen = {Type = 'bind', Value = 'K', Name = 'Wormfield Keybind'},
 		-- buildwarnings
 		-- wormfieldprompts
+				
 	},
 	System = {
 		usageAnalytics = {Type = 'toggle', Value = true, Name = 'Anonymised Analytics'},
