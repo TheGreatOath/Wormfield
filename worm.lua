@@ -77,8 +77,8 @@ local settingsTable = {
 		-- wormfieldprompts
 
 	},
-	System = {
-		usageAnalytics = {Type = 'toggle', Value = true, Name = 'Anonymised Analytics'},
+	--System = {
+		--usageAnalytics = {Type = 'toggle', Value = true, Name = 'Anonymised Analytics'},
 	}
 }
 
