@@ -72,7 +72,7 @@ local ConfigurationExtension = ".rfld"
 local settingsTable = {
 	General = {
 		-- if needs be in order just make getSetting(name)
-		WormfieldOpen = {Type = 'bind', Value = 'K', Name = 'Wormfield Keybind'},
+		wormfieldOpen = {Type = 'bind', Value = 'K', Name = 'Wormfield Keybind'},
 		-- buildwarnings
 		-- wormfieldprompts
 
@@ -108,9 +108,9 @@ local function loadSettings()
 
 			-- for debug in studio
 			if useStudio then
-				--file = [[
-		--{"General":{"wormfieldOpen":{"Value":"K","Type":"bind","Name":"Wormfield Keybind","Element":{"HoldToInteract":false,"Ext":true,"Name":"Wormfield Keybind","Set":null,"CallOnChange":true,"Callback":null,"CurrentKeybind":"K"}}},"System":{"usageAnalytics":{"Value":false,"Type":"toggle","Name":"Anonymised Analytics","Element":{"Ext":true,"Name":"Anonymised Analytics","Set":null,"CurrentValue":false,"Callback":null}}}}
-	--]]
+				file = [[
+		{"General":{"wormfieldOpen":{"Value":"K","Type":"bind","Name":"Wormfield Keybind","Element":{"HoldToInteract":false,"Ext":true,"Name":"Wormfield Keybind","Set":null,"CallOnChange":true,"Callback":null,"CurrentKeybind":"K"}}},"System":{"usageAnalytics":{"Value":false,"Type":"toggle","Name":"Anonymised Analytics","Element":{"Ext":true,"Name":"Anonymised Analytics","Set":null,"CurrentValue":false,"Callback":null}}}}
+	]]
 			end
 
 
