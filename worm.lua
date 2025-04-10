@@ -72,7 +72,7 @@ local ConfigurationExtension = ".rfld"
 local settingsTable = {
 	General = {
 		-- if needs be in order just make getSetting(name)
-		WormfieldOpen = {Type = 'bind', Value = 'K', Name = 'Wormfield Keybind'},
+		RayfieldOpen = {Type = 'bind', Value = 'K', Name = 'Wormfield Keybind'},
 		-- buildwarnings
 		-- wormfieldprompts
 
