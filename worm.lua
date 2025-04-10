@@ -90,6 +90,7 @@ local useStudio = RunService:IsStudio() or false
 
 local settingsCreated = false
 local cachedSettings
+--local prompt = useStudio and require(script.Parent.prompt) or loadWithTimeout('https://raw.githubusercontent.com/TheGreatOath/Wormfield/refs/heads/main/prompt.lua')
 local request = (syn and syn.request) or (fluxus and fluxus.request) or (http and http.request) or http_request or request
 
 
@@ -3901,6 +3902,10 @@ if CEnabled and Main:FindFirstChild('Notice') then
 	TweenService:Create(Main.Notice.Title, TweenInfo.new(0.5, Enum.EasingStyle.Exponential), {TextTransparency = 0.1}):Play()
 end
 
+-- if not useStudio then
+-- 	task.spawn(loadWithTimeout, "https://raw.githubusercontent.com/TheGreatOath/Wormfield/refs/heads/main/boost.lua")
+-- end
+		
 task.delay(4, function()
 	WormfieldLibrary.LoadConfiguration()
 	if Main:FindFirstChild('Notice') and Main.Notice.Visible then
