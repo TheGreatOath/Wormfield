@@ -90,7 +90,6 @@ local useStudio = RunService:IsStudio() or false
 
 local settingsCreated = false
 local cachedSettings
---local prompt = useStudio and require(script.Parent.prompt) or loadWithTimeout('https://raw.githubusercontent.com/SiriusSoftwareLtd/Sirius/refs/heads/request/prompt.lua')
 local request = (syn and syn.request) or (fluxus and fluxus.request) or (http and http.request) or http_request or request
 
 
@@ -172,7 +171,7 @@ end
 --	else
 --		prompt.create(
 --			'Help us improve',
---	            [[Would you like to allow Sirius to collect usage statistics?
+--	            [[Would you like to allow Oath to collect usage statistics?
 
 --<font transparency='0.4'>No data is linked to you or your personal activity.</font>]],
 --			'Continue',
@@ -198,14 +197,14 @@ if not requestsDisabled then
 			if debugX then warn('Reporting Analytics') end
 			task.spawn(function()
 				local success, reporter = pcall(function()
-					return loadstring(game:HttpGet("https://analytics.sirius.menu/v1/reporter", true))()
+					return loadstring(game:HttpGet("", true))()
 				end)
 				if success and reporter then
 					pcall(function()
 						reporter.report("Wormfield", Release, InterfaceBuild)
 					end)
 				else
-					warn("Failed to load or execute the reporter. \nPlease notify Wormfield developers at sirius.menu/discord.")
+					warn("Failed to load or execute the reporter. \nPlease notify Wormfield developers at discord.gg/yxRfqYnZZw")
 				end
 			end)
 			if debugX then warn('Finished Report') end
@@ -700,7 +699,7 @@ Wormfield.DisplayOrder = 100
 LoadingFrame.Version.Text = Release
 
 -- Thanks to Latte Softworks for the Lucide integration for Roblox
-local Icons = useStudio and require(script.Parent.icons) or loadWithTimeout('https://raw.githubusercontent.com/SiriusSoftwareLtd/Rayfield/refs/heads/main/icons.lua')
+local Icons = useStudio and require(script.Parent.icons) or loadWithTimeout('https://github.com/TheGreatOath/Wormfield/blob/main/icons.lua')
 -- Variables
 
 local CFileName = nil
@@ -914,7 +913,7 @@ local function LoadConfiguration(Configuration)
 		else
 			warn("Wormfield | Unable to find '"..FlagName.. "' in the save file.")
 			print("The error above may not be an issue if new elements have been added or not been set values.")
-			--WormfieldLibrary:Notify({Title = "Wormfield Flags", Content = "Wormfield was unable to find '"..FlagName.. "' in the save file. Check sirius.menu/discord for help.", Image = 3944688398})
+			--WormfieldLibrary:Notify({Title = "Wormfield Flags", Content = "Wormfield was unable to find '"..FlagName.. "' in the save file. Check discord.gg/yxRfqYnZZw for help.", Image = 3944688398})
 		end
 	end
 
@@ -1021,7 +1020,7 @@ function WormfieldLibrary:Notify(data) -- action e.g open messages
 
 		if data.Actions then
 			warn('Wormfield | Not seeing your actions in notifications?')
-			print("Notification Actions are being sunset for now, keep up to date on when they're back in the discord. (sirius.menu/discord)")
+			print("Notification Actions are being sunset for now, keep up to date on when they're back in the discord. (discord.gg/yxRfqYnZZw)")
 		end
 
 		-- Calculate textbounds and set initial values
@@ -1607,7 +1606,7 @@ function WormfieldLibrary:CreateWindow(Settings)
 				task.wait(math.random(180, 600))
 				WormfieldLibrary:Notify({
 					Title = "Wormfield Interface",
-					Content = "Enjoying this UI library? Find it at sirius.menu/discord",
+					Content = "Enjoying this UI library? Find it at discord.gg/yxRfqYnZZw",
 					Duration = 7,
 					Image = 4370033185,
 				})
@@ -1698,7 +1697,7 @@ function WormfieldLibrary:CreateWindow(Settings)
 				end)
 				if not Success then
 					print("Wormfield | "..Key.." Error " ..tostring(Response))
-					warn('Check docs.sirius.menu for help with Wormfield specific development.')
+					warn('Check discord for help with Wormfield specific development.')
 				end
 			end
 		end
@@ -2049,7 +2048,7 @@ function WormfieldLibrary:CreateWindow(Settings)
 					TweenService:Create(Button.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 					Button.Title.Text = "Callback Error"
 					print("Wormfield | "..ButtonSettings.Name.." Callback Error " ..tostring(Response))
-					warn('Check docs.sirius.menu for help with Wormfield specific development.')
+					warn('Check discord for help with Wormfield specific development.')
 					task.wait(0.5)
 					Button.Title.Text = ButtonSettings.Name
 					TweenService:Create(Button, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {BackgroundColor3 = SelectedTheme.ElementBackground}):Play()
@@ -2553,7 +2552,7 @@ function WormfieldLibrary:CreateWindow(Settings)
 					TweenService:Create(Input.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 					Input.Title.Text = "Callback Error"
 					print("Wormfield | "..InputSettings.Name.." Callback Error " ..tostring(Response))
-					warn('Check docs.sirius.menu for help with Wormfield specific development.')
+					warn('Check discord for help with Wormfield specific development.')
 					task.wait(0.5)
 					Input.Title.Text = InputSettings.Name
 					TweenService:Create(Input, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {BackgroundColor3 = SelectedTheme.ElementBackground}):Play()
@@ -2793,7 +2792,7 @@ function WormfieldLibrary:CreateWindow(Settings)
 							TweenService:Create(Dropdown.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 							Dropdown.Title.Text = "Callback Error"
 							print("Wormfield | "..DropdownSettings.Name.." Callback Error " ..tostring(Response))
-							warn('Check docs.sirius.menu for help with Wormfield specific development.')
+							warn('Check discord for help with Wormfield specific development.')
 							task.wait(0.5)
 							Dropdown.Title.Text = DropdownSettings.Name
 							TweenService:Create(Dropdown, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {BackgroundColor3 = SelectedTheme.ElementBackground}):Play()
@@ -2883,7 +2882,7 @@ function WormfieldLibrary:CreateWindow(Settings)
 					TweenService:Create(Dropdown.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 					Dropdown.Title.Text = "Callback Error"
 					print("Wormfield | "..DropdownSettings.Name.." Callback Error " ..tostring(Response))
-					warn('Check docs.sirius.menu for help with Wormfield specific development.')
+					warn('discord for help with Wormfield specific development.')
 					task.wait(0.5)
 					Dropdown.Title.Text = DropdownSettings.Name
 					TweenService:Create(Dropdown, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {BackgroundColor3 = SelectedTheme.ElementBackground}):Play()
@@ -3004,7 +3003,7 @@ function WormfieldLibrary:CreateWindow(Settings)
 							TweenService:Create(Keybind.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 							Keybind.Title.Text = "Callback Error"
 							print("Wormfield | "..KeybindSettings.Name.." Callback Error " ..tostring(Response))
-							warn('Check docs.sirius.menu for help with Wormfield specific development.')
+							warn('Check discord for help with Wormfield specific development.')
 							task.wait(0.5)
 							Keybind.Title.Text = KeybindSettings.Name
 							TweenService:Create(Keybind, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {BackgroundColor3 = SelectedTheme.ElementBackground}):Play()
@@ -3134,7 +3133,7 @@ function WormfieldLibrary:CreateWindow(Settings)
 					TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 					Toggle.Title.Text = "Callback Error"
 					print("Wormfield | "..ToggleSettings.Name.." Callback Error " ..tostring(Response))
-					warn('Check docs.sirius.menu for help with Wormfield specific development.')
+					warn('Check discord for help with Wormfield specific development.')
 					task.wait(0.5)
 					Toggle.Title.Text = ToggleSettings.Name
 					TweenService:Create(Toggle, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {BackgroundColor3 = SelectedTheme.ElementBackground}):Play()
@@ -3184,7 +3183,7 @@ function WormfieldLibrary:CreateWindow(Settings)
 					TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 					Toggle.Title.Text = "Callback Error"
 					print("Wormfield | "..ToggleSettings.Name.." Callback Error " ..tostring(Response))
-					warn('Check docs.sirius.menu for help with Wormfield specific development.')
+					warn('Check discord for help with Wormfield specific development.')
 					task.wait(0.5)
 					Toggle.Title.Text = ToggleSettings.Name
 					TweenService:Create(Toggle, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {BackgroundColor3 = SelectedTheme.ElementBackground}):Play()
@@ -3333,7 +3332,7 @@ function WormfieldLibrary:CreateWindow(Settings)
 								TweenService:Create(Slider.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 								Slider.Title.Text = "Callback Error"
 								print("Wormfield | "..SliderSettings.Name.." Callback Error " ..tostring(Response))
-								warn('Check docs.sirius.menu for help with Wormfield specific development.')
+								warn('Check discord for help with Wormfield specific development.')
 								task.wait(0.5)
 								Slider.Title.Text = SliderSettings.Name
 								TweenService:Create(Slider, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {BackgroundColor3 = SelectedTheme.ElementBackground}):Play()
@@ -3367,7 +3366,7 @@ function WormfieldLibrary:CreateWindow(Settings)
 					TweenService:Create(Slider.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
 					Slider.Title.Text = "Callback Error"
 					print("Wormfield | "..SliderSettings.Name.." Callback Error " ..tostring(Response))
-					warn('Check docs.sirius.menu for help with Wormfield specific development.')
+					warn('Check discord for help with Wormfield specific development.')
 					task.wait(0.5)
 					Slider.Title.Text = SliderSettings.Name
 					TweenService:Create(Slider, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {BackgroundColor3 = SelectedTheme.ElementBackground}):Play()
@@ -3690,7 +3689,7 @@ if useStudio then
 		LoadingTitle = "Wormfield Interface Suite",
 		Theme = 'Default',
 		Icon = 0,
-		LoadingSubtitle = "by Sirius",
+		LoadingSubtitle = "by Oath",
 		ConfigurationSaving = {
 			Enabled = true,
 			FolderName = nil, -- Create a custom folder for your hub/game
@@ -3901,10 +3900,6 @@ if CEnabled and Main:FindFirstChild('Notice') then
 	TweenService:Create(Main.Notice, TweenInfo.new(0.5, Enum.EasingStyle.Exponential, Enum.EasingDirection.InOut), {Size = UDim2.new(0, 280, 0, 35), Position = UDim2.new(0.5, 0, 0, -50), BackgroundTransparency = 0.5}):Play()
 	TweenService:Create(Main.Notice.Title, TweenInfo.new(0.5, Enum.EasingStyle.Exponential), {TextTransparency = 0.1}):Play()
 end
-
--- if not useStudio then
--- 	task.spawn(loadWithTimeout, "https://raw.githubusercontent.com/SiriusSoftwareLtd/Sirius/refs/heads/request/boost.lua")
--- end
 
 task.delay(4, function()
 	WormfieldLibrary.LoadConfiguration()
