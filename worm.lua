@@ -183,41 +183,6 @@ end
 --	repeat task.wait() until analytics ~= nil
 --end
 
-if not requestsDisabled then
-	if debugX then
-		warn('Querying Settings for Reporter Information')
-	end
-	local function sendReport()
-		if useStudio then
-			print('Sending Analytics')
-		else
-			if debugX then warn('Reporting Analytics') end
-			task.spawn(function()
-				local success, reporter = pcall(function()
-					return loadstring(game:HttpGet("", true))()
-				end)
-				if success and reporter then
-					pcall(function()
-						reporter.report("Wormfield", Release, InterfaceBuild)
-					end)
-				else
-					warn("Failed to load or execute the reporter. \nPlease notify Wormfield developers at discord.gg/yxRfqYnZZw")
-				end
-			end)
-			if debugX then warn('Finished Report') end
-		end
-	end
-	if cachedSettings and (#cachedSettings == 0 or (cachedSettings.System and cachedSettings.System.usageAnalytics and cachedSettings.System.usageAnalytics.Value)) then
-		sendReport()
-	elseif not cachedSettings then
-		sendReport()
-	end
-end
-
-if debugX then
-	warn('Moving on to continue initialisation')
-end
-
 local WormfieldLibrary = {
 	Flags = {},
 	Theme = {
