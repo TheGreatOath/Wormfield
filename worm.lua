@@ -78,8 +78,8 @@ local settingsTable = {
 				
 	}
 
---local HttpService = getService('HttpService')
---local RunService = getService('RunService')
+local HttpService = getService('HttpService')
+local RunService = getService('RunService')
 
 -- Environment Check
 local useStudio = RunService:IsStudio() or false
