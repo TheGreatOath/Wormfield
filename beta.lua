@@ -1,13 +1,13 @@
---[[             |
-'                |   Last changes:     
-FluentPlus 1.2.2 |   06.03 - Fixed some themes and mobile button, added normal bypass to Fisch. 
-dsc.gg/hydrahub  |   31.01 - added Show_Assets toggle. Soon ill make normal bypass.
-'                |   29.01 - well well well removed last update, added "Bloody" theme and fluent-plus settings 😉
+--[[            |
+'               |   Last changes:     
+WormPlus 1.0.0  |   06.03 - Fixed some themes and mobile button, added normal bypass to Fisch. 
+.gg/yxRfqYnZZw  |   31.01 - added Show_Assets toggle. Soon ill make normal bypass.
+'               |   29.01 - well well well removed last update, added "Bloody" theme and Worm-plus settings 😉
 ]]--    
 
---- FLUENT PLUS SETTINGS ---
-local Show_Button = false -- Shows the button for toggle fluent ui manually. If "false", works only on mobile, if "true", works everytime.
-local Button_Icon = "" -- Icon of the button for toggle fluent ui
+--- WORM PLUS SETTINGS ---
+local Show_Button = false -- Shows the button for toggle Worm ui manually. If "false", works only on mobile, if "true", works everytime.
+local Button_Icon = "" -- Icon of the button for toggle Worm ui
 ----------------------------
 
 local Lighting = game:GetService("Lighting")
@@ -734,7 +734,7 @@ local Themes = {
 }
 
 local Library = {
-	Version = "1.2.2",
+	Version = "1.0.0",
 
 	OpenFrames = {},
 	Options = {},
@@ -5823,7 +5823,7 @@ if RunService:IsStudio() then
 end
 
 local SaveManager = {} do
-	SaveManager.Folder = "FluentSettings"
+	SaveManager.Folder = "WormSettings"
 	SaveManager.Ignore = {}
 	SaveManager.Parser = {
 		Toggle = {
@@ -5946,7 +5946,7 @@ local SaveManager = {} do
 				end
 			end
 
-			Fluent.SettingLoaded = true
+			Worm.SettingLoaded = true
 
 			return true, decoded
 		end
@@ -6148,7 +6148,7 @@ local SaveManager = {} do
 end
 
 local InterfaceManager = {} do
-	InterfaceManager.Folder = "FluentSettings"
+	InterfaceManager.Folder = "WormSettings"
 	InterfaceManager.Settings = {
 		Acrylic = true,
 		Transparency = true,
@@ -6336,9 +6336,9 @@ function Library:Notify(Config)
 end
 
 if getgenv then
-	getgenv().Fluent = Library
+	getgenv().Worm = Library
 else
-	Fluent = Library
+	Worm = Library
 end
 
 local MinimizeButton = New("TextButton", {
