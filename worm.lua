@@ -105,7 +105,7 @@ local function loadSettings()
 			-- for debug in studio
 			if useStudio then
 				file = [[
-		{"General":{"wormfieldOpen":{"Value":"K","Type":"bind","Name":"Wormfield Keybind","Element":{"HoldToInteract":false,"Ext":true,"Name":"Wormfield Keybind","Set":null,"CallOnChange":true,"Callback":null,"CurrentKeybind":"K"}}}}}}}
+		{"General":{"wormfieldOpen":{"Value":"K","Type":"bind","Name":"Wormfield Keybind","Element":{"HoldToInteract":false,"Ext":true,"Name":"Wormfield Keybind","Set":null,"CallOnChange":true,"Callback":null,"CurrentKeybind":"K"}
 	]]
 			end
 
