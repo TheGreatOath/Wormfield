@@ -76,11 +76,7 @@ local settingsTable = {
 		-- buildwarnings
 		-- wormfieldprompts
 				
-	},
-	System = {
-		usageAnalytics = {Type = 'toggle', Value = true, Name = 'Anonymised Analytics'},
 	}
-}
 
 local HttpService = getService('HttpService')
 local RunService = getService('RunService')
