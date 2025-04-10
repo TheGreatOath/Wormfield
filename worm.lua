@@ -82,7 +82,7 @@ local settingsTable = {
 --local RunService = getService('RunService')
 
 -- Environment Check
---local useStudio = RunService:IsStudio() or false
+local useStudio = RunService:IsStudio() or false
 
 local settingsCreated = false
 local cachedSettings
