@@ -75,7 +75,7 @@ local settingsTable = {
 		wormfieldOpen = {Type = 'bind', Value = 'K', Name = 'Wormfield Keybind'},
 		-- buildwarnings
 		-- wormfieldprompts
-	}
+	},
 
 local HttpService = getService('HttpService')
 local RunService = getService('RunService')
